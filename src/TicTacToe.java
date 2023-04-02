@@ -14,6 +14,7 @@ public class TicTacToe {
             for (char c : row) {
                 System.out.print(c);
             }
+            System.out.println();
         }
         
         
