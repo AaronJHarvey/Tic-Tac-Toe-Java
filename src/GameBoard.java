@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class GameBoard {
+
     public static char[][] gameBoard = {
 
             { ' ', '|', ' ', '|', ' ' },
@@ -14,6 +15,8 @@ public class GameBoard {
     //  Fourth Line/Row - All borders for board: Lower/Upper space border line, Cross Line where 4 spaces intersect,Lower/Upper space border line, Cross Line where 4 spaces intersect, Lower/Upper Space border line 
     //  Fifth Line/Row: Empty Space, Space Border Line, Empty Space, Space Border line, Empty Space
    
+
+
     public static void printGameBoard() {
 
         // for each row in the gameBoard (char[] row)
