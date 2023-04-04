@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TicTacToe {
     //  First Line/Row: Empty Space, Space Border Line, Empty Space, Space Border line, Empty Space
     //  Second Line/Row - All borders for board: Lower/Upper space border line, Cross Line where 4 spaces intersect,Lower/Upper space border line, Cross Line where 4 spaces intersect, Lower/Upper Space border line 
@@ -13,6 +15,13 @@ public class TicTacToe {
     }; 
     public static void main(String[] args) {
         GameBoard.printGameBoard(gameBoard);
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your Placement (1-9): ");
+        int pos = scan.nextInt();
+        System.out.println(pos);
+
+
 
         // Print a game board of 3 rows of 3 colums to the console. 
         // The player enters a number 1-9 to place their marker in that spot

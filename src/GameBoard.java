@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GameBoard {
     // public static char[][] gameBoard = {
 
@@ -20,5 +22,6 @@ public class GameBoard {
         }
     }
 
+   
    
 }
