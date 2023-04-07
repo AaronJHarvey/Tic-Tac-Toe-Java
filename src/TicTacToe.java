@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class TicTacToe {
     public static Character userMark;
     public static Character compMark;
+    public static int turn;
+    public static String activePlayer;
 
     public static void main(String[] args) {
 
@@ -21,11 +23,18 @@ public class TicTacToe {
                 { '-', '+', '-', '+', '-' },
                 { ' ', '|', ' ', '|', ' ' }
         };
-
+        turn = 1;
         chooseMarker();
-        System.out.println("User Marker: " + userMark + "\nComputer Maker: " + compMark);
-        printGameBoard(gameBoard);
-        placeMarker(gameBoard);
+        determineActive();
+        System.out.println("It is the " + activePlayer + "'s turn.");
+        turn++;
+        System.out.println(turn);
+        determineActive();
+        System.out.println("It is the " + activePlayer + "'s turn.");
+        // System.out.println("User Marker: " + userMark + "\nComputer Maker: " + compMark);
+        // printGameBoard(gameBoard);
+        // placeMarker(gameBoard);
+
     }
 
     public static void chooseMarker() {
@@ -64,7 +73,6 @@ public class TicTacToe {
         System.out.print("Enter Your Placement (1-9): ");
         int input = scan.nextInt();
 
-        
         switch (input) {
             case 1:
                 if (gameBoard[0][0] == ' ') {
@@ -94,7 +102,7 @@ public class TicTacToe {
                 }
                 break;
             case 4:
-               if (gameBoard[2][0] == ' ') {
+                if (gameBoard[2][0] == ' ') {
                     gameBoard[2][0] = userMark;
                     printGameBoard(gameBoard);
                 } else {
@@ -147,9 +155,27 @@ public class TicTacToe {
                     placeMarker(gameBoard);
                 }
                 break;
-            
+
         }
     }
+
+    public static void determineActive() {
+        if ((turn + 2) % 2 == 1) {
+            if (userMark == 'x') {
+                activePlayer = "user";
+            } else {
+                activePlayer = "comp";
+            };
+        } else {
+            if (userMark == 'x') {
+                activePlayer = "comp";
+            } else {
+                activePlayer = "user";
+            }
+        }
+    }
+
+
 }
 
 
