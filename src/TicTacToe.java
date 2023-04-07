@@ -24,10 +24,8 @@ public class TicTacToe {
 
         chooseMarker();
         System.out.println("User Marker: " + userMark + "\nComputer Maker: " + compMark);
-         
-
-        // printGameBoard(gameBoard);
-        // placeMarker(gameBoard);
+        printGameBoard(gameBoard);
+        placeMarker(gameBoard);
     }
 
     public static void chooseMarker() {
@@ -70,7 +68,7 @@ public class TicTacToe {
         switch (input) {
             case 1:
                 if (gameBoard[0][0] == ' ') {
-                    gameBoard[0][0] = 'X';
+                    gameBoard[0][0] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -79,7 +77,7 @@ public class TicTacToe {
                 break;
             case 2:
                 if (gameBoard[0][2] == ' ') {
-                    gameBoard[0][2] = 'X';
+                    gameBoard[0][2] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -88,7 +86,7 @@ public class TicTacToe {
                 break;
             case 3:
                 if (gameBoard[0][4] == ' ') {
-                    gameBoard[0][4] = 'X';
+                    gameBoard[0][4] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -97,7 +95,7 @@ public class TicTacToe {
                 break;
             case 4:
                if (gameBoard[2][0] == ' ') {
-                    gameBoard[2][0] = 'X';
+                    gameBoard[2][0] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -106,7 +104,7 @@ public class TicTacToe {
                 break;
             case 5:
                 if (gameBoard[2][2] == ' ') {
-                    gameBoard[2][2] = 'X';
+                    gameBoard[2][2] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -115,7 +113,7 @@ public class TicTacToe {
                 break;
             case 6:
                 if (gameBoard[2][4] == ' ') {
-                    gameBoard[2][4] = 'X';
+                    gameBoard[2][4] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -124,7 +122,7 @@ public class TicTacToe {
                 break;
             case 7:
                 if (gameBoard[4][0] == ' ') {
-                    gameBoard[4][0] = 'X';
+                    gameBoard[4][0] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -133,7 +131,7 @@ public class TicTacToe {
                 break;
             case 8:
                 if (gameBoard[4][2] == ' ') {
-                    gameBoard[4][2] = 'X';
+                    gameBoard[4][2] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
@@ -142,7 +140,7 @@ public class TicTacToe {
                 break;
             case 9:
                 if (gameBoard[4][4] == ' ') {
-                    gameBoard[4][4] = 'X';
+                    gameBoard[4][4] = userMark;
                     printGameBoard(gameBoard);
                 } else {
                     System.out.println("invalid move");
