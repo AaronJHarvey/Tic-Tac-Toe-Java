@@ -31,6 +31,7 @@ public class TicTacToe {
         System.out.println(turn);
         determineActive();
         System.out.println("It is the " + activePlayer + "'s turn.");
+       
         // System.out.println("User Marker: " + userMark + "\nComputer Maker: " + compMark);
         // printGameBoard(gameBoard);
         // placeMarker(gameBoard);
@@ -160,17 +161,17 @@ public class TicTacToe {
     }
 
     public static void determineActive() {
-        if ((turn + 2) % 2 == 1) {
-            if (userMark == 'x') {
+        if (turn % 2 == 1) {
+            if (userMark == 'X') {
                 activePlayer = "user";
             } else {
                 activePlayer = "comp";
             };
         } else {
-            if (userMark == 'x') {
-                activePlayer = "comp";
-            } else {
+            if (userMark == 'O') {
                 activePlayer = "user";
+            } else {
+                activePlayer = "comp";
             }
         }
     }
